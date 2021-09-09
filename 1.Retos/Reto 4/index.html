@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>Estudiantes</h1></center>
+<div class="container py-2">
+    <p class="lead">Ingrese Estudiante</p>
+    <form>
+        <input id="nombre" type="text" placeholder="Ingrese nombre" class="form-control my-2">
+        <input id="nota" type="number" placeholder="Ingrese nota" class="form-control my-2">
+        <button id="boton" class="btn btn-success" type="reset" onclick="capturar();">Agregar</button>
+        <button id="boton" class="btn btn-success" type="reset" onclick="calcular();">Calcular</button>
+    </form>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="container">
+                <h3 id="ganaron">Ganaron:</h3>
+                <table class="table" id="tabla1">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <td><strong>NOMBRE</strong</td>
+                            <td><strong>NOTA</strong></td>
+                        </tr>
+                    </thead>   
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="container">
+                <h3 id="recuperar">Debe recuperar: </h3>
+                <table class="table" id="tabla2">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <td><strong>NOMBRE</strong></td>
+                            <td><strong>NOTA</strong></td>
+                        </tr>
+                    </thead>   
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="container">
+                <h3 id="perdieron">Perdieron: </h3>
+                <table class="table" id="tabla3">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <td><strong>NOMBRE</strong</td>
+                            <td><strong>NOTA</strong></td>
+                        </tr>
+                    </thead>   
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="App.js"></script>
+    
+    
+</body>
+</html>
