@@ -14,6 +14,7 @@ function capturar() {
         this.cantidad = cantidad;
 
     }
+    // capturar productos
     let capturarProducto = document.getElementById('producto').value;
     let capturarValor = document.getElementById('valor').value;
     let capturarCantidad = document.getElementById('cantidad').value;
@@ -30,19 +31,23 @@ let mercado = [];
 let valorTotal = 0;
 
 function agregar() {
+    // Enviar el producto a un array
     mercado.push(nuevoProducto);
+    // Multiplicar el valor por la cantidad
     total = nuevoProducto.valor * nuevoProducto.cantidad;
     console.log(mercado);
     
 }
 
 function sumar() {
+    // sumar los totales para obtener un bruto
     valorTotal = valorTotal + total;
     console.log(valorTotal + ' Bruto');
     
 }
 
 function iva() {
+    // Calcular IVA
     totalIva = (valorTotal * 19) / 100;
     console.log(totalIva + ' IVA');
     
@@ -53,17 +58,28 @@ function iva() {
 }
 
 function calcular() {
+    // obtener el valor neto
     neto = valorTotal + totalIva;
     console.log(neto + ' Neto Total');
     document.getElementById('neto').innerHTML += ' ' + neto;
     
+    mercado.sort(function(a,b){
+        return (b.valor-a.valor)
+    })
+    // lista ordenada de mayor a menor
+    console.log('Lista ordenada de menor a mayor');
+    console.log(mercado);
+    // Producto de mayor valor
+    console.log('Producto de mayor valor');
+    console.log(mercado[0]);
 
-    
-    for (let i = 0; i < mercado.length; i++) {
-        console.log(mercado[i]);
-        
-        
-    }
+    mercado.sort(function(a,b){
+        return (a.valor-b.valor)
+    })
+    // Producto de menor valor
+    console.log('Producto de menor valor');
+    console.log(mercado[0]);
+
     
     
 }
